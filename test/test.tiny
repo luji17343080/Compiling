@@ -1,0 +1,26 @@
+/** this is a comment line in the sample program **/
+
+INT globalVar1;
+STRING globalVar2 := "Tiny+ Compiler!";
+
+INT f2(INT x, INT y)
+BEGIN
+    INT a := x + y;
+    INT z;
+    z := x * x - (a - y) * y;
+    RETURN z; 
+END
+
+INT MAIN f1() 
+BEGIN
+    INT x;
+    READ(x, "A41.input");
+    INT y;
+    READ(y, "A42.input");
+    INT z;
+    IF (x == y)
+        z := f2(x, y) + f2(y, x);
+    ELSE
+        z := x + y;
+    WRITE (z, "A4.output"); 
+END
